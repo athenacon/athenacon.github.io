@@ -793,7 +793,7 @@
 				document.querySelector('input[name="test_a_10_reaction_time"]').value = seconds;
 				 
 				let xhr = new XMLHttpRequest();
-				xhr.open("POST", "http://127.0.0.1:8000/post_test_results/", true);
+				xhr.open("POST", "https://pedestrian-evaluation-backend.herokuapp.com/mock_post_test_results/", true);
 				xhr.setRequestHeader("Content-Type", "application/json");
 				let data = JSON.stringify({
 				'test_name' : 'a', 
