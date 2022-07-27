@@ -1,3 +1,5 @@
 uvicorn~=0.18.2
 fastapi~=0.79.0
 pydantic~=1.9.1
+PyMySQL~=1.0.2
+starlette~=0.19.1
