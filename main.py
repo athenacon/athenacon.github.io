@@ -1,5 +1,5 @@
-import uvicorn as uvicorn
 import pymysql
+import uvicorn as uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 from starlette.middleware.cors import CORSMiddleware
@@ -70,6 +70,8 @@ class Questionnaire(BaseModel):
     myRange9: int = None
     myRange10: int = None
     text_box: str = None
+
+
 app = FastAPI()
 
 origins = [
@@ -131,12 +133,12 @@ async def post_quest_res(quest_res: Questionnaire):
 
         connection.commit()  # commiting the connection
         connection.close()  # close the connection
+
     elif quest_res.test_name == "questionnaire_b":
 
         connection = pymysql.connect(host="localhost", user="root", passwd="",database="db_connect")  # database connection
         cursor = connection.cursor()
         print(quest_res.test_name)
-        print("adsasd")
         query = "INSERT INTO questionnaire_answers_b (gender,age_range,familiarity_tech,myRange1,myRange2,myRange3,myRange4,myRange5,myRange6,myRange7,myRange8,myRange9,myRange10,text_box) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"
 
         cursor.execute(query, (quest_res.gender, quest_res.age_range, quest_res.familiarity_tech, quest_res.myRange1, quest_res.myRange2, quest_res.myRange3, quest_res.myRange4, quest_res.myRange5, quest_res.myRange6, quest_res.myRange7, quest_res.myRange8, quest_res.myRange9, quest_res.myRange10,quest_res.text_box))
@@ -144,10 +146,12 @@ async def post_quest_res(quest_res: Questionnaire):
         connection.commit()  # commiting the connection
         connection.close()  # close the connection)
 
+
 @app.get("/")
 async def root():
     return {"message": "Pedestrian project backend :)"}
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app")
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, access_log=True)
+
