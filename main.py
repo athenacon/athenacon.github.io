@@ -73,9 +73,9 @@ class Questionnaire(BaseModel):
 app = FastAPI()
 
 origins = [
-    "http://localhost",
-    "http://localhost:8080",
+    "https://athenacon.github.io"
 ]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
