@@ -794,8 +794,7 @@
 				 
 				let xhr = new XMLHttpRequest();
 				xhr.open("POST", "https://pedestrian-evaluation-backend.herokuapp.com/mock_post_test_results/", true);
-				xhr.open("POST", "https://pedestrian-evaluation-backend.herokuapp.com/download_all_submitted/", true);
-
+ 
 				xhr.setRequestHeader("Content-Type", "application/json");
 				let data = JSON.stringify({
 				'test_name' : 'a', 
