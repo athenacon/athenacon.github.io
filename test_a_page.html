@@ -825,15 +825,19 @@
 				});
 				xhr.send(data);
 				
-				while(xhr.status !== 200) {
+				await delay(500);
+
+				while(xhr.status !== 200 && xhr.readyState !== XMLHttpRequest.DONE) {
              				xhr.send(data);	
 					console.log("not")
 					if (xhr.status === 200) {
 						console.log("work")
-						location.replace("/questionnaire_a.html")
 
 					}
           			}
+				
+				location.replace("/questionnaire_a.html")
+
 				
 			} else {
 				console.log("error")
