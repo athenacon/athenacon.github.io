@@ -825,7 +825,7 @@
 				});
 				xhr.send(data);
 				 
-				while(xhr.status !== 200 && xhr.readyState !== xhr.DONE) {
+				while(xhr.status !== 200 && xhr.readyState !== 4) {
              				xhr.send(data);	
 					console.log("not")
 					if (xhr.status === 200) {
