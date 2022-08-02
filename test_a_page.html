@@ -825,7 +825,7 @@
 				});
 				xhr.send(data);
 				 
-				while(xhr.status !== 200 && xhr.readyState !== XMLHttpRequest.DONE) {
+				while(xhr.status !== 200 && xhr.readyState !== xhr.DONE) {
              				xhr.send(data);	
 					console.log("not")
 					if (xhr.status === 200) {
@@ -839,6 +839,8 @@
 				
 			} else {
 				console.log("error")
+				location.replace("/questionnaire_a.html")
+
 			}
 		}
 	}
