@@ -824,9 +824,7 @@
 				
 				});
 				xhr.send(data);
-				
-				await delay(500);
-
+				 
 				while(xhr.status !== 200 && xhr.readyState !== XMLHttpRequest.DONE) {
              				xhr.send(data);	
 					console.log("not")
