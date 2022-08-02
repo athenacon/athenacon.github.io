@@ -826,13 +826,13 @@
 				xhr.send(data);
 				
 				
-      				if (xmlhttp.readyState === 4) {
-        				var response = JSON.parse(xmlhttp.responseText);
-          				if (xmlhttp.status === 200) {
+      				if (xhr.readyState === 4) {
+        				var response = JSON.parse(xhr.responseText);
+          				if (xhr.status === 200) {
              					console.log('successful');
 						location.replace("/questionnaire_a.html")
           				} 
-					while(xmlhttp.status !== 200) {
+					while(xhr.status !== 200) {
              					xhr.send(data);	
           				}
       
