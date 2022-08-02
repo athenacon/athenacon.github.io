@@ -825,16 +825,18 @@
 				});
 				xhr.send(data);
 				 
-				while(xhr.status !== 200 && xhr.readyState !== 4) {
-             				xhr.send(data);	
-					console.log("not")
-					if (xhr.status === 200) {
-						console.log("work")
+				xmlhttp.onreadystatechange = function() {
+					if (xmlhttp.readyState === 4) {
+						var response = JSON.parse(xmlhttp.responseText);
+					if (xmlhttp.status === 200) {
+						console.log('successful');
+						location.replace("/questionnaire_a.html")
 
-					}
-          			}
-				
-				location.replace("/questionnaire_a.html")
+					} else {
+					     console.log('failed');
+					  }
+				      }
+				    }
 
 				
 			} else {
