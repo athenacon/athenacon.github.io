@@ -170,8 +170,20 @@
             
             	});
             	xhr.send(data);
-            	location.replace("/index_main_a.html")
-            	window.alert("Thank you for completing the questionnaire.");
+                
+                xhr.onreadystatechange = function() {
+			    if (xhr.readyState === 4) {
+				    var response = JSON.parse(xhr.responseText);
+				if (xhr.status === 200) {
+					console.log('successful');
+					location.replace("/index_main_a.html")
+            	    window.alert("Thank you for completing the questionnaire.");
+			    } 
+			    else {
+				    console.log('failed');
+			    }
+			    }
+		        }
             	}  
             
             var slider1 = document.getElementById("myRange1");
