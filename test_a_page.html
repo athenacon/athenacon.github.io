@@ -827,11 +827,15 @@
 				
 				while(xhr.status !== 200) {
              				xhr.send(data);	
+					console.log("not")
+					if (xhr.status === 200) {
+						console.log("work")
+						location.replace("/questionnaire_a.html")
+
+					}
           			}
 				
-      				location.replace("/questionnaire_a.html")
-          				 
-					
+         	
       
     			}
 
