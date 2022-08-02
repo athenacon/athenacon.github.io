@@ -825,16 +825,13 @@
 				});
 				xhr.send(data);
 				
+				while(xhr.status !== 200) {
+             				xhr.send(data);	
+          			}
 				
-      				if (xhr.readyState === 4) {
-        				var response = JSON.parse(xhr.responseText);
-          				if (xhr.status === 200) {
-             					console.log('successful');
-						location.replace("/questionnaire_a.html")
-          				} 
-					while(xhr.status !== 200) {
-             					xhr.send(data);	
-          				}
+      				location.replace("/questionnaire_a.html")
+          				 
+					
       
     			}
 
