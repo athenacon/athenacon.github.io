@@ -7,7 +7,9 @@ from starlette.middleware.cors import CORSMiddleware
 
 class TestResults(BaseModel):
     test_name: str
-
+        
+    cntofclickedbtn: int = None
+        
     test_a_1: str = None
     test_a_2: str = None
     test_a_3: str = None
@@ -97,9 +99,9 @@ async def post_test_results(test_results: TestResults):
         empty = "test_results.test_name"
         print(type(empty))
         print(type(test_results.test_name))
-        query = "INSERT INTO test_a (test_a_1,test_a_2,test_a_3,test_a_4,test_a_5,test_a_6,test_a_7,test_a_8,test_a_9,test_a_10,test_a_1_reaction_time,test_a_2_reaction_time,test_a_3_reaction_time,test_a_4_reaction_time,test_a_5_reaction_time,test_a_6_reaction_time,test_a_7_reaction_time,test_a_8_reaction_time,test_a_9_reaction_time,test_a_10_reaction_time) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"
+        query = "INSERT INTO test_a (cntofclickedbtn, test_a_1,test_a_2,test_a_3,test_a_4,test_a_5,test_a_6,test_a_7,test_a_8,test_a_9,test_a_10,test_a_1_reaction_time,test_a_2_reaction_time,test_a_3_reaction_time,test_a_4_reaction_time,test_a_5_reaction_time,test_a_6_reaction_time,test_a_7_reaction_time,test_a_8_reaction_time,test_a_9_reaction_time,test_a_10_reaction_time) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"
 
-        cursor.execute(query, (test_results.test_a_1, test_results.test_a_2, test_results.test_a_3, test_results.test_a_4,test_results.test_a_5,test_results.test_a_6,test_results.test_a_7,test_results.test_a_8,test_results.test_a_9,test_results.test_a_10,test_results.test_a_1_reaction_time,test_results.test_a_2_reaction_time,test_results.test_a_3_reaction_time,test_results.test_a_4_reaction_time,test_results.test_a_5_reaction_time,test_results.test_a_6_reaction_time,test_results.test_a_7_reaction_time,test_results.test_a_8_reaction_time,test_results.test_a_9_reaction_time,test_results.test_a_10_reaction_time))
+        cursor.execute(query, (test_results.cntofclickedbtn, test_results.test_a_1, test_results.test_a_2, test_results.test_a_3, test_results.test_a_4,test_results.test_a_5,test_results.test_a_6,test_results.test_a_7,test_results.test_a_8,test_results.test_a_9,test_results.test_a_10,test_results.test_a_1_reaction_time,test_results.test_a_2_reaction_time,test_results.test_a_3_reaction_time,test_results.test_a_4_reaction_time,test_results.test_a_5_reaction_time,test_results.test_a_6_reaction_time,test_results.test_a_7_reaction_time,test_results.test_a_8_reaction_time,test_results.test_a_9_reaction_time,test_results.test_a_10_reaction_time))
 
         connection.commit()  # commiting the connection
         connection.close() # close the connection
@@ -110,9 +112,9 @@ async def post_test_results(test_results: TestResults):
         empty = "test_results.test_name"
         print(type(empty))
         print(type(test_results.test_name))
-        query = "INSERT INTO test_b (test_b_1,test_b_2,test_b_3,test_b_4,test_b_5,test_b_6,test_b_7,test_b_8,test_b_9,test_b_10,test_b_1_reaction_time,test_b_2_reaction_time,test_b_3_reaction_time,test_b_4_reaction_time,test_b_5_reaction_time,test_b_6_reaction_time,test_b_7_reaction_time,test_b_8_reaction_time,test_b_9_reaction_time,test_b_10_reaction_time) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"
+        query = "INSERT INTO test_b (cntofclickedbtn,test_b_1,test_b_2,test_b_3,test_b_4,test_b_5,test_b_6,test_b_7,test_b_8,test_b_9,test_b_10,test_b_1_reaction_time,test_b_2_reaction_time,test_b_3_reaction_time,test_b_4_reaction_time,test_b_5_reaction_time,test_b_6_reaction_time,test_b_7_reaction_time,test_b_8_reaction_time,test_b_9_reaction_time,test_b_10_reaction_time) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"
 
-        cursor.execute(query, (test_results.test_b_1, test_results.test_b_2, test_results.test_b_3, test_results.test_b_4,test_results.test_b_5,test_results.test_b_6,test_results.test_b_7,test_results.test_b_8,test_results.test_b_9,test_results.test_b_10,test_results.test_b_1_reaction_time,test_results.test_b_2_reaction_time,test_results.test_b_3_reaction_time,test_results.test_b_4_reaction_time,test_results.test_b_5_reaction_time,test_results.test_b_6_reaction_time,test_results.test_b_7_reaction_time,test_results.test_b_8_reaction_time,test_results.test_b_9_reaction_time,test_results.test_b_10_reaction_time))
+        cursor.execute(query, (test_results.cntofclickedbtn,test_results.test_b_1, test_results.test_b_2, test_results.test_b_3, test_results.test_b_4,test_results.test_b_5,test_results.test_b_6,test_results.test_b_7,test_results.test_b_8,test_results.test_b_9,test_results.test_b_10,test_results.test_b_1_reaction_time,test_results.test_b_2_reaction_time,test_results.test_b_3_reaction_time,test_results.test_b_4_reaction_time,test_results.test_b_5_reaction_time,test_results.test_b_6_reaction_time,test_results.test_b_7_reaction_time,test_results.test_b_8_reaction_time,test_results.test_b_9_reaction_time,test_results.test_b_10_reaction_time))
 
         connection.commit()  # commiting the connection
         connection.close() # close the connection
