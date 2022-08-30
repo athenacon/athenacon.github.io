@@ -43,6 +43,10 @@
 		text-align: center;
 		list-style: none;
 	}
+	.content {
+		display: none;
+		overflow: hidden;
+	}
 	</style>
 </head>
 <!-- page content -->
@@ -73,15 +77,19 @@
 					<fieldset  > <b> Please select the appropriate obstacle type: </b>
 						<input type="hidden" name="test_a_1_reaction_time" value="1.1">
 						<br>
-						<input type="radio" name="test_a_1" value="Crack" /> Crack
+						<input type="radio" name="test_a_1" value="Hole / Pot-hole" /> Hole / Pot-hole
 						<br>
-						<input type="radio" name="test_a_1" value="Hole/Pot-hole" /> Hole/Pot-hole
+						<input type="radio" name="test_a_1" value="Traffic cone" /> Traffic cone
 						<br>
 						<input type="radio" name="test_a_1" value="Paver (broken)" /> Paver (broken)
 						<br>
-						<input type="radio" name="test_a_1" value="Narrow pavement" /> Narrow pavement
+						<input type="radio" name="test_a_1" value="Crack" /> Crack
 						<br>
 						<input type="radio" name="test_a_1" value="No pavement" /> No pavement
+						<br>
+						<input type="button" onclick="toggleClock()" id="btn" value="Show more options"  class="collapsible"></input>
+						<div class="content">
+						<input type="radio" name="test_a_1" value="Narrow pavement" /> Narrow pavement 
 						<br>
 						<input type="radio" name="test_a_1" value="Bench" /> Bench
 						<br>
@@ -105,25 +113,23 @@
 						<br>
 						<input type="radio" name="test_a_1" value="Public art - Statue" /> Public art - Statue
 						<br>
-						<input type="radio" name="test_a_1" value="Bus stop" /> Bus stop
+						<input type="radio" name="test_a_1" value="Bus stop" />  Bus stop
 						<br>
 						<input type="radio" name="test_a_1" value="Kiosk" /> Kiosk
 						<br>
 						<input type="radio" name="test_a_1" value="Play area" /> Play area
 						<br>
-						<input type="radio" name="test_a_1" value="4 wheel" /> 4 wheel
+						<input type="radio" name="test_a_1" value="4 wheel - Vehicle" /> 4 wheel - Vehicle
 						<br>
-						<input type="radio" name="test_a_1" value="2 wheel" /> 2 wheel
+						<input type="radio" name="test_a_1" value="2 wheel - Motorbike, bicycle" /> 2 wheel - Motorbike, bicycle
 						<br>
 						<input type="radio" name="test_a_1" value="Scaffolding" /> Scaffolding
 						<br>
 						<input type="radio" name="test_a_1" value="Boulder" /> Boulder
 						<br>
-						<input type="radio" name="test_a_1" value="Safety sign" /> Safety sign
+						<input type="radio" name="test_a_1" value="Safety sign" /> Safety sign 
 						<br>
 						<input type="radio" name="test_a_1" value="Fence" /> Fence
-						<br>
-						<input type="radio" name="test_a_1" value="Traffic cone" /> Traffic cone
 						<br>
 						<input type="radio" name="test_a_1" value="Litter" /> Litter
 						<br>
@@ -133,87 +139,101 @@
 						<br>
 						<input type="radio" name="test_a_1" value="Advertisement sign" /> Advertisement sign
 						<br>
-						<input type="radio" name="test_a_1" value="Crowded pavement" /> Crowded pavement
-						<br>
-						<input type="button" name="next" class="next action-button" value="NEXT" /> </fieldset>
+						<input type="radio" name="test_a_1" value="Crowded Pavement" /> Crowded Pavement
+						<br></div>
+						<input type="button" name="next" class="next action-button" value="NEXT" /> </fieldset> 
 					<fieldset>
 						<b> Please select the appropriate obstacle type:   </b>
 						<input type="hidden" name="test_a_2_reaction_time" value="1.1">
 						<br>
-						<input type="radio" name="test_a_2" value="Crack" /> Crack
-						<br>
-						<input type="radio" name="test_a_2" value="Hole/Pot-hole" /> Hole/Pot-hole
+						<input type="radio" name="test_a_2" value="Fence" /> Fence
 						<br>
 						<input type="radio" name="test_a_2" value="Paver (broken)" /> Paver (broken)
 						<br>
-						<input type="radio" name="test_a_2" value="Narrow pavement" /> Narrow pavement
-						<br>
 						<input type="radio" name="test_a_2" value="No pavement" /> No pavement
-						<br>
-						<input type="radio" name="test_a_2" value="Bench" /> Bench
-						<br>
-						<input type="radio" name="test_a_2" value="Light" /> Light
-						<br>
-						<input type="radio" name="test_a_2" value="Bin" /> Bin
-						<br>
-						<input type="radio" name="test_a_2" value="Parking meter" /> Parking meter
-						<br>
-						<input type="radio" name="test_a_2" value="Plant pot" /> Plant pot
-						<br>
-						<input type="radio" name="test_a_2" value="Tree" /> Tree
-						<br>
-						<input type="radio" name="test_a_2" value="Shrub" /> Shrub
-						<br>
-						<input type="radio" name="test_a_2" value="Flower" /> Flower
-						<br>
-						<input type="radio" name="test_a_2" value="Parking prevention barrier" /> Parking prevention barrier
-						<br>
-						<input type="radio" name="test_a_2" value="Mail box" /> Mail box
-						<br>
-						<input type="radio" name="test_a_2" value="Public art - Statue" /> Public art - Statue
-						<br>
-						<input type="radio" name="test_a_2" value="Bus stop" /> Bus stop
-						<br>
-						<input type="radio" name="test_a_2" value="Kiosk" /> Kiosk
-						<br>
-						<input type="radio" name="test_a_2" value="Play area" /> Play area
-						<br>
-						<input type="radio" name="test_a_2" value="4 wheel" /> 4 wheel
-						<br>
-						<input type="radio" name="test_a_2" value="2 wheel" /> 2 wheel
-						<br>
-						<input type="radio" name="test_a_2" value="Scaffolding" /> Scaffolding
-						<br>
-						<input type="radio" name="test_a_2" value="Boulder" /> Boulder
-						<br>
-						<input type="radio" name="test_a_2" value="Safety sign" /> Safety sign
-						<br>
-						<input type="radio" name="test_a_2" value="Fence" /> Fence
 						<br>
 						<input type="radio" name="test_a_2" value="Traffic cone" /> Traffic cone
 						<br>
-						<input type="radio" name="test_a_2" value="Litter" /> Litter
+						<input type="radio" name="test_a_2" value="Parking prevention barrier" /> Parking prevention barrier
 						<br>
-						<input type="radio" name="test_a_2" value="Chair" /> Chair
-						<br>
-						<input type="radio" name="test_a_2" value="Table" /> Table
-						<br>
-						<input type="radio" name="test_a_2" value="Advertisement sign" /> Advertisement sign
-						<br>
-						<input type="radio" name="test_a_2" value="Crowded pavement" /> Crowded pavement
-						<br>
+						<input type="button" onclick="toggleClock()" id="btn2" value="Show more options"  class="collapsible"></input>
+						<div class="content">						 
+							<input type="radio" name="test_a_2" value="Crack" /> Crack
+							<br>
+							<input type="radio" name="test_a_2" value="Hole / Pot-hole" /> Hole / Pot-hole 
+							<br>
+							<input type="radio" name="test_a_2" value="Narrow pavement" /> Narrow pavement 
+							<br>
+							<input type="radio" name="test_a_2" value="Bench" /> Bench
+							<br>
+							<input type="radio" name="test_a_2" value="Light" /> Light
+							<br>
+							<input type="radio" name="test_a_2" value="Bin" /> Bin
+							<br>
+							<input type="radio" name="test_a_2" value="Parking meter" /> Parking meter
+							<br>
+							<input type="radio" name="test_a_2" value="Plant pot" /> Plant pot
+							<br>
+							<input type="radio" name="test_a_2" value="Tree" /> Tree
+							<br>
+							<input type="radio" name="test_a_2" value="Shrub" /> Shrub
+							<br>
+							<input type="radio" name="test_a_2" value="Flower" /> Flower
+							<br>
+							<input type="radio" name="test_a_2" value="Parking prevention barrier" /> Parking prevention barrier
+							<br>
+							<input type="radio" name="test_a_2" value="Mail box" /> Mail box
+							<br>
+							<input type="radio" name="test_a_2" value="Public art - Statue" /> Public art - Statue
+							<br>
+							<input type="radio" name="test_a_2" value="Bus stop" />  Bus stop
+							<br>
+							<input type="radio" name="test_a_2" value="Kiosk" /> Kiosk
+							<br>
+							<input type="radio" name="test_a_2" value="Play area" /> Play area
+							<br>
+							<input type="radio" name="test_a_2" value="4 wheel - Vehicle" /> 4 wheel - Vehicle
+							<br>
+							<input type="radio" name="test_a_2" value="2 wheel - Motorbike, bicycle" /> 2 wheel - Motorbike, bicycle
+							<br>
+							<input type="radio" name="test_a_2" value="Scaffolding" /> Scaffolding
+							<br>
+							<input type="radio" name="test_a_2" value="Boulder" /> Boulder
+							<br>
+							<input type="radio" name="test_a_2" value="Safety sign" /> Safety sign 
+							<br>
+							<input type="radio" name="test_a_2" value="Litter" /> Litter
+							<br>
+							<input type="radio" name="test_a_2" value="Chair" /> Chair
+							<br>
+							<input type="radio" name="test_a_2" value="Table" /> Table
+							<br>
+							<input type="radio" name="test_a_2" value="Advertisement sign" /> Advertisement sign
+							<br>
+							<input type="radio" name="test_a_2" value="Crowded Pavement" /> Crowded Pavement
+						<br></div>
 						<input type="button" name="next" class="next action-button" value="NEXT" /> </fieldset>
 					<fieldset>
 						<b> Please select the appropriate obstacle type:   </b>
 						<input type="hidden" name="test_a_3_reaction_time" value="1.1">
 						<br>
+						<input type="radio" name="test_a_3" value="Tree" /> Tree
+						<br>
+						<input type="radio" name="test_a_3" value="Plant pot" /> Plant pot
+						<br>
+						<input type="radio" name="test_a_3" value="Parking prevention barrier" /> Parking prevention barrier
+						<br>
+						<input type="radio" name="test_a_3" value="Flower" /> Flower
+						<br>
+						<input type="radio" name="test_a_3" value="Narrow pavement" /> Narrow pavement
+						<br>
+						<input type="button" onclick="toggleClock()" id="btn3" value="Show more options"  class="collapsible"></input>
+						<div class="content">
 						<input type="radio" name="test_a_3" value="Crack" /> Crack
 						<br>
 						<input type="radio" name="test_a_3" value="Hole/Pot-hole" /> Hole/Pot-hole
 						<br>
 						<input type="radio" name="test_a_3" value="Paver (broken)" /> Paver (broken)
-						<br>
-						<input type="radio" name="test_a_3" value="Narrow pavement" /> Narrow pavement
 						<br>
 						<input type="radio" name="test_a_3" value="No pavement" /> No pavement
 						<br>
@@ -225,15 +245,7 @@
 						<br>
 						<input type="radio" name="test_a_3" value="Parking meter" /> Parking meter
 						<br>
-						<input type="radio" name="test_a_3" value="Plant pot" /> Plant pot
-						<br>
-						<input type="radio" name="test_a_3" value="Tree" /> Tree
-						<br>
 						<input type="radio" name="test_a_3" value="Shrub" /> Shrub
-						<br>
-						<input type="radio" name="test_a_3" value="Flower" /> Flower
-						<br>
-						<input type="radio" name="test_a_3" value="Parking prevention barrier" /> Parking prevention barrier
 						<br>
 						<input type="radio" name="test_a_3" value="Mail box" /> Mail box
 						<br>
@@ -268,21 +280,27 @@
 						<input type="radio" name="test_a_3" value="Advertisement sign" /> Advertisement sign
 						<br>
 						<input type="radio" name="test_a_3" value="Crowded pavement" /> Crowded pavement
-						<br>
+						<br></div>
 						<input type="button" name="next" class="next action-button" value="NEXT" /> </fieldset>
 					<fieldset>
 						<b> Please select the appropriate obstacle type:   </b>
 						<input type="hidden" name="test_a_4_reaction_time" value="1.1">
 						<br>
-						<input type="radio" name="test_a_4" value="Crack" /> Crack
-						<br>
-						<input type="radio" name="test_a_4" value="Hole/Pot-hole" /> Hole/Pot-hole
-						<br>
-						<input type="radio" name="test_a_4" value="Paver (broken)" /> Paver (broken)
-						<br>
 						<input type="radio" name="test_a_4" value="Narrow pavement" /> Narrow pavement
 						<br>
 						<input type="radio" name="test_a_4" value="No pavement" /> No pavement
+						<br>
+						<input type="radio" name="test_a_4" value="4 wheel" /> 4 wheel
+						<br>
+						<input type="radio" name="test_a_4" value="Parking prevention barrier" /> Parking prevention barrier
+						<br>
+						<input type="radio" name="test_a_4" value="Paver (broken)" /> Paver (broken)
+						<br>
+						<input type="button" onclick="toggleClock()" id="btn4" value="Show more options"  class="collapsible"></input>
+						<div class="content">
+						<input type="radio" name="test_a_4" value="Crack" /> Crack
+						<br>
+						<input type="radio" name="test_a_4" value="Hole/Pot-hole" /> Hole/Pot-hole
 						<br>
 						<input type="radio" name="test_a_4" value="Bench" /> Bench
 						<br>
@@ -300,8 +318,6 @@
 						<br>
 						<input type="radio" name="test_a_4" value="Flower" /> Flower
 						<br>
-						<input type="radio" name="test_a_4" value="Parking prevention barrier" /> Parking prevention barrier
-						<br>
 						<input type="radio" name="test_a_4" value="Mail box" /> Mail box
 						<br>
 						<input type="radio" name="test_a_4" value="Public art - Statue" /> Public art - Statue
@@ -311,8 +327,6 @@
 						<input type="radio" name="test_a_4" value="Kiosk" /> Kiosk
 						<br>
 						<input type="radio" name="test_a_4" value="Play area" /> Play area
-						<br>
-						<input type="radio" name="test_a_4" value="4 wheel" /> 4 wheel
 						<br>
 						<input type="radio" name="test_a_4" value="2 wheel" /> 2 wheel
 						<br>
@@ -335,12 +349,24 @@
 						<input type="radio" name="test_a_4" value="Advertisement sign" /> Advertisement sign
 						<br>
 						<input type="radio" name="test_a_4" value="Crowded pavement" /> Crowded pavement
-						<br>
+						<br></div>
 						<input type="button" name="next" class="next action-button" value="NEXT" /> </fieldset>
 					<fieldset>
 						<b> Please select the appropriate obstacle type:   </b>
 						<input type="hidden" name="test_a_5_reaction_time" value="1.1">
 						<br>
+						<input type="radio" name="test_a_5" value="2 wheel" /> 2 wheel
+						<br>
+						<input type="radio" name="test_a_5" value="Plant pot" /> Plant pot
+						<br>
+						<input type="radio" name="test_a_5" value="Bin" /> Bin
+						<br>
+						<input type="radio" name="test_a_5" value="Tree" /> Tree
+						<br>
+						<input type="radio" name="test_a_5" value="Litter" /> Litter
+						<br>
+						<input type="button" onclick="toggleClock()" id="btn5" value="Show more options"  class="collapsible"></input>
+						<div class="content">
 						<input type="radio" name="test_a_5" value="Crack" /> Crack
 						<br>
 						<input type="radio" name="test_a_5" value="Hole/Pot-hole" /> Hole/Pot-hole
@@ -355,13 +381,7 @@
 						<br>
 						<input type="radio" name="test_a_5" value="Light" /> Light
 						<br>
-						<input type="radio" name="test_a_5" value="Bin" /> Bin
-						<br>
 						<input type="radio" name="test_a_5" value="Parking meter" /> Parking meter
-						<br>
-						<input type="radio" name="test_a_5" value="Plant pot" /> Plant pot
-						<br>
-						<input type="radio" name="test_a_5" value="Tree" /> Tree
 						<br>
 						<input type="radio" name="test_a_5" value="Shrub" /> Shrub
 						<br>
@@ -381,8 +401,6 @@
 						<br>
 						<input type="radio" name="test_a_5" value="4 wheel" /> 4 wheel
 						<br>
-						<input type="radio" name="test_a_5" value="2 wheel" /> 2 wheel
-						<br>
 						<input type="radio" name="test_a_5" value="Scaffolding" /> Scaffolding
 						<br>
 						<input type="radio" name="test_a_5" value="Boulder" /> Boulder
@@ -393,8 +411,6 @@
 						<br>
 						<input type="radio" name="test_a_5" value="Traffic cone" /> Traffic cone
 						<br>
-						<input type="radio" name="test_a_5" value="Litter" /> Litter
-						<br>
 						<input type="radio" name="test_a_5" value="Chair" /> Chair
 						<br>
 						<input type="radio" name="test_a_5" value="Table" /> Table
@@ -402,19 +418,25 @@
 						<input type="radio" name="test_a_5" value="Advertisement sign" /> Advertisement sign
 						<br>
 						<input type="radio" name="test_a_5" value="Crowded pavement" /> Crowded pavement
-						<br>
+						<br></div>
 						<input type="button" name="next" class="next action-button" value="NEXT" /> </fieldset>
 					<fieldset>
 						<b> Please select the appropriate obstacle type:   </b>
 						<input type="hidden" name="test_a_6_reaction_time" value="1.1">
 						<br>
+						<input type="radio" name="test_a_6" value="4 wheel" /> 4 wheel
+						<br>
 						<input type="radio" name="test_a_6" value="Crack" /> Crack
 						<br>
-						<input type="radio" name="test_a_6" value="Hole/Pot-hole" /> Hole/Pot-hole
+						<input type="radio" name="test_a_6" value="Parking prevention barrier" /> Parking prevention barrier
+						<br>
+						<input type="radio" name="test_a_6" value="Narrow pavement" /> Narrow pavement
 						<br>
 						<input type="radio" name="test_a_6" value="Paver (broken)" /> Paver (broken)
 						<br>
-						<input type="radio" name="test_a_6" value="Narrow pavement" /> Narrow pavement
+						<input type="button" onclick="toggleClock()" id="btn6" value="Show more options"  class="collapsible"></input>
+						<div class="content">
+						<input type="radio" name="test_a_6" value="Hole/Pot-hole" /> Hole/Pot-hole
 						<br>
 						<input type="radio" name="test_a_6" value="No pavement" /> No pavement
 						<br>
@@ -434,8 +456,6 @@
 						<br>
 						<input type="radio" name="test_a_6" value="Flower" /> Flower
 						<br>
-						<input type="radio" name="test_a_6" value="Parking prevention barrier" /> Parking prevention barrier
-						<br>
 						<input type="radio" name="test_a_6" value="Mail box" /> Mail box
 						<br>
 						<input type="radio" name="test_a_6" value="Public art - Statue" /> Public art - Statue
@@ -445,8 +465,6 @@
 						<input type="radio" name="test_a_6" value="Kiosk" /> Kiosk
 						<br>
 						<input type="radio" name="test_a_6" value="Play area" /> Play area
-						<br>
-						<input type="radio" name="test_a_6" value="4 wheel" /> 4 wheel
 						<br>
 						<input type="radio" name="test_a_6" value="2 wheel" /> 2 wheel
 						<br>
@@ -469,25 +487,31 @@
 						<input type="radio" name="test_a_6" value="Advertisement sign" /> Advertisement sign
 						<br>
 						<input type="radio" name="test_a_6" value="Crowded pavement" /> Crowded pavement
-						<br>
+						<br></div>
 						<input type="button" name="next" class="next action-button" value="NEXT" /> </fieldset>
 					<fieldset>
 						<b> Please select the appropriate obstacle type:   </b>
 						<input type="hidden" name="test_a_7_reaction_time" value="1.1">
 						<br>
-						<input type="radio" name="test_a_7" value="Crack" /> Crack
-						<br>
-						<input type="radio" name="test_a_7" value="Hole/Pot-hole" /> Hole/Pot-hole
+						<input type="radio" name="test_a_7" value="4 wheel" /> 4 wheel
 						<br>
 						<input type="radio" name="test_a_7" value="Paver (broken)" /> Paver (broken)
+						<br>
+						<input type="radio" name="test_a_7" value="Crack" /> Crack
+						<br>
+						<input type="radio" name="test_a_7" value="Parking prevention barrier" /> Parking prevention barrier
+						<br>
+						<input type="radio" name="test_a_7" value="Light" /> Light
+						<br>
+						<input type="button" onclick="toggleClock()" id="btn7" value="Show more options"  class="collapsible"></input>
+						<div class="content">
+						<input type="radio" name="test_a_7" value="Hole/Pot-hole" /> Hole/Pot-hole
 						<br>
 						<input type="radio" name="test_a_7" value="Narrow pavement" /> Narrow pavement
 						<br>
 						<input type="radio" name="test_a_7" value="No pavement" /> No pavement
 						<br>
 						<input type="radio" name="test_a_7" value="Bench" /> Bench
-						<br>
-						<input type="radio" name="test_a_7" value="Light" /> Light
 						<br>
 						<input type="radio" name="test_a_7" value="Bin" /> Bin
 						<br>
@@ -501,8 +525,6 @@
 						<br>
 						<input type="radio" name="test_a_7" value="Flower" /> Flower
 						<br>
-						<input type="radio" name="test_a_7" value="Parking prevention barrier" /> Parking prevention barrier
-						<br>
 						<input type="radio" name="test_a_7" value="Mail box" /> Mail box
 						<br>
 						<input type="radio" name="test_a_7" value="Public art - Statue" /> Public art - Statue
@@ -512,8 +534,6 @@
 						<input type="radio" name="test_a_7" value="Kiosk" /> Kiosk
 						<br>
 						<input type="radio" name="test_a_7" value="Play area" /> Play area
-						<br>
-						<input type="radio" name="test_a_7" value="4 wheel" /> 4 wheel
 						<br>
 						<input type="radio" name="test_a_7" value="2 wheel" /> 2 wheel
 						<br>
@@ -536,27 +556,33 @@
 						<input type="radio" name="test_a_7" value="Advertisement sign" /> Advertisement sign
 						<br>
 						<input type="radio" name="test_a_7" value="Crowded pavement" /> Crowded pavement
-						<br>
+						<br></div>
 						<input type="button" name="next" class="next action-button" value="NEXT" /> </fieldset>
 					<fieldset>
 						<b> Please select the appropriate obstacle type:   </b>
 						<input type="hidden" name="test_a_8_reaction_time" value="1.1">
 						<br>
+						<input type="radio" name="test_a_8" value="Bin" /> Bin
+						<br>
+						<input type="radio" name="test_a_8" value="Litter" /> Litter
+						<br>
+						<input type="radio" name="test_a_8" value="Parking prevention barrier" /> Parking prevention barrier
+						<br>
+						<input type="radio" name="test_a_8" value="Narrow pavement" /> Narrow pavement
+						<br>
+						<input type="radio" name="test_a_8" value="Light" /> Light
+						<br>
+						<input type="button" onclick="toggleClock()" id="btn8" value="Show more options"  class="collapsible"></input>
+						<div class="content">
 						<input type="radio" name="test_a_8" value="Crack" /> Crack
 						<br>
 						<input type="radio" name="test_a_8" value="Hole/Pot-hole" /> Hole/Pot-hole
 						<br>
 						<input type="radio" name="test_a_8" value="Paver (broken)" /> Paver (broken)
 						<br>
-						<input type="radio" name="test_a_8" value="Narrow pavement" /> Narrow pavement
-						<br>
 						<input type="radio" name="test_a_8" value="No pavement" /> No pavement
 						<br>
 						<input type="radio" name="test_a_8" value="Bench" /> Bench
-						<br>
-						<input type="radio" name="test_a_8" value="Light" /> Light
-						<br>
-						<input type="radio" name="test_a_8" value="Bin" /> Bin
 						<br>
 						<input type="radio" name="test_a_8" value="Parking meter" /> Parking meter
 						<br>
@@ -567,8 +593,6 @@
 						<input type="radio" name="test_a_8" value="Shrub" /> Shrub
 						<br>
 						<input type="radio" name="test_a_8" value="Flower" /> Flower
-						<br>
-						<input type="radio" name="test_a_8" value="Parking prevention barrier" /> Parking prevention barrier
 						<br>
 						<input type="radio" name="test_a_8" value="Mail box" /> Mail box
 						<br>
@@ -594,8 +618,6 @@
 						<br>
 						<input type="radio" name="test_a_8" value="Traffic cone" /> Traffic cone
 						<br>
-						<input type="radio" name="test_a_8" value="Litter" /> Litter
-						<br>
 						<input type="radio" name="test_a_8" value="Chair" /> Chair
 						<br>
 						<input type="radio" name="test_a_8" value="Table" /> Table
@@ -603,19 +625,27 @@
 						<input type="radio" name="test_a_8" value="Advertisement sign" /> Advertisement sign
 						<br>
 						<input type="radio" name="test_a_8" value="Crowded pavement" /> Crowded pavement
-						<br>
+						<br></div>
 						<input type="button" name="next" class="next action-button" value="NEXT" /> </fieldset>
 					<fieldset>
 						<b> Please select the appropriate obstacle type:   </b>
 						<input type="hidden" name="test_a_9_reaction_time" value="1.1">
 						<br>
-						<input type="radio" name="test_a_9" value="Crack" /> Crack
+						<input type="radio" name="test_a_9" value="Bin" /> Bin
 						<br>
-						<input type="radio" name="test_a_9" value="Hole/Pot-hole" /> Hole/Pot-hole
+						<input type="radio" name="test_a_9" value="Tree" /> Tree
+						<br>
+						<input type="radio" name="test_a_9" value="Parking prevention barrier" /> Parking prevention barrier
+						<br>
+						<input type="radio" name="test_a_9" value="Narrow pavement" /> Narrow pavement
 						<br>
 						<input type="radio" name="test_a_9" value="Paver (broken)" /> Paver (broken)
 						<br>
-						<input type="radio" name="test_a_9" value="Narrow pavement" /> Narrow pavement
+						<input type="button" onclick="toggleClock()" id="btn9" value="Show more options"  class="collapsible"></input>
+						<div class="content">
+						<input type="radio" name="test_a_9" value="Crack" /> Crack
+						<br>
+						<input type="radio" name="test_a_9" value="Hole/Pot-hole" /> Hole/Pot-hole
 						<br>
 						<input type="radio" name="test_a_9" value="No pavement" /> No pavement
 						<br>
@@ -623,19 +653,13 @@
 						<br>
 						<input type="radio" name="test_a_9" value="Light" /> Light
 						<br>
-						<input type="radio" name="test_a_9" value="Bin" /> Bin
-						<br>
 						<input type="radio" name="test_a_9" value="Parking meter" /> Parking meter
 						<br>
 						<input type="radio" name="test_a_9" value="Plant pot" /> Plant pot
 						<br>
-						<input type="radio" name="test_a_9" value="Tree" /> Tree
-						<br>
 						<input type="radio" name="test_a_9" value="Shrub" /> Shrub
 						<br>
 						<input type="radio" name="test_a_9" value="Flower" /> Flower
-						<br>
-						<input type="radio" name="test_a_9" value="Parking prevention barrier" /> Parking prevention barrier
 						<br>
 						<input type="radio" name="test_a_9" value="Mail box" /> Mail box
 						<br>
@@ -670,21 +694,29 @@
 						<input type="radio" name="test_a_9" value="Advertisement sign" /> Advertisement sign
 						<br>
 						<input type="radio" name="test_a_9" value="Crowded pavement" /> Crowded pavement
-						<br>
+						<br></div>
 						<input type="button" name="next" class="next action-button" value="NEXT" /> </fieldset>
 					<fieldset>
 						<b> Please select the appropriate obstacle type:   </b>
 						<input type="hidden" name="test_a_10_reaction_time" value="1.1">
 						<br>
+						<input type="radio" name="test_a_10" value="Fence" /> Fence
+						<br>
+						<input type="radio" name="test_a_10" value="No pavement" /> No pavement
+						<br>
+						<input type="radio" name="test_a_10" value="Parking prevention barrier" /> Parking prevention barrier
+						<br>
+						<input type="radio" name="test_a_10" value="Narrow pavement" /> Narrow pavement
+						<br>
+						<input type="radio" name="test_a_10" value="Scaffolding" /> Scaffolding
+						<br>
+						<input type="button" onclick="toggleClock()" id="btn10" value="Show more options"  class="collapsible"></input>
+						<div class="content">
 						<input type="radio" name="test_a_10" value="Crack" /> Crack
 						<br>
 						<input type="radio" name="test_a_10" value="Hole/Pot-hole" /> Hole/Pot-hole
 						<br>
 						<input type="radio" name="test_a_10" value="Paver (broken)" /> Paver (broken)
-						<br>
-						<input type="radio" name="test_a_10" value="Narrow pavement" /> Narrow pavement
-						<br>
-						<input type="radio" name="test_a_10" value="No pavement" /> No pavement
 						<br>
 						<input type="radio" name="test_a_10" value="Bench" /> Bench
 						<br>
@@ -702,8 +734,6 @@
 						<br>
 						<input type="radio" name="test_a_10" value="Flower" /> Flower
 						<br>
-						<input type="radio" name="test_a_10" value="Parking prevention barrier" /> Parking prevention barrier
-						<br>
 						<input type="radio" name="test_a_10" value="Mail box" /> Mail box
 						<br>
 						<input type="radio" name="test_a_10" value="Public art - Statue" /> Public art - Statue
@@ -718,13 +748,9 @@
 						<br>
 						<input type="radio" name="test_a_10" value="2 wheel" /> 2 wheel
 						<br>
-						<input type="radio" name="test_a_10" value="Scaffolding" /> Scaffolding
-						<br>
 						<input type="radio" name="test_a_10" value="Boulder" /> Boulder
 						<br>
 						<input type="radio" name="test_a_10" value="Safety sign" /> Safety sign
-						<br>
-						<input type="radio" name="test_a_10" value="Fence" /> Fence
 						<br>
 						<input type="radio" name="test_a_10" value="Traffic cone" /> Traffic cone
 						<br>
@@ -737,13 +763,31 @@
 						<input type="radio" name="test_a_10" value="Advertisement sign" /> Advertisement sign
 						<br>
 						<input type="radio" name="test_a_10" value="Crowded pavement" /> Crowded pavement
-						<br>
+						<br></div>
 						<input type="button" name="next" class="next action-button" value="Submit and redirect to the questionnaire" />
 					</fieldset>
 				</div>
 			</div>
 		</div>
  	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+ 
+
+		for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			content.style.display = "none";
+			} else {
+			content.style.display = "block";
+			}
+		});
+		}
+	
+
+		
 	var slider_img = document.querySelector('.slider-img');
 	var images = ['a.jpg', 'b.jpg', 'c.jpg', 'd.jpg', 'e.jpg', 'f.jpg', 'g.jpg', 'h.jpg', 'i.jpg', 'k.jpg'];
 	var i = 0;
@@ -753,6 +797,107 @@
 		startTime = new Date().getTime();
 	}
 
+	const btn = document.getElementById('btn');
+	const btn2 = document.getElementById('btn2');
+	const btn3 = document.getElementById('btn3');
+	const btn4 = document.getElementById('btn4');
+	const btn5 = document.getElementById('btn5');
+	const btn6 = document.getElementById('btn6');
+	const btn7 = document.getElementById('btn7');
+	const btn8 = document.getElementById('btn8');
+	const btn9 = document.getElementById('btn9');
+	const btn10 = document.getElementById('btn10');
+	
+	btn.addEventListener('click', () => {
+  		// 👇️ hide button
+  		btn.style.display = 'none';
+
+  		// 👇️ show div
+  		const box = document.getElementById('box');
+  		box.style.display = 'block';
+	}	);
+
+
+	btn2.addEventListener('click', () => {
+  		// 👇️ hide button
+  		btn2.style.display = 'none';
+
+  		// 👇️ show div
+  		const box = document.getElementById('box');
+  		box.style.display = 'block';
+	}	);
+
+	btn3.addEventListener('click', () => {
+  		// 👇️ hide button
+  		btn3.style.display = 'none';
+
+  		// 👇️ show div
+  		const box = document.getElementById('box');
+  		box.style.display = 'block';
+	}	);
+
+	btn4.addEventListener('click', () => {
+  		// 👇️ hide button
+  		btn4.style.display = 'none';
+
+  		// 👇️ show div
+  		const box = document.getElementById('box');
+  		box.style.display = 'block';
+	}	);
+
+	btn5.addEventListener('click', () => {
+  		// 👇️ hide button
+  		btn5.style.display = 'none';
+
+  		// 👇️ show div
+  		const box = document.getElementById('box');
+  		box.style.display = 'block';
+	}	);
+
+	btn6.addEventListener('click', () => {
+  		// 👇️ hide button
+  		btn6.style.display = 'none';
+
+  		// 👇️ show div
+  		const box = document.getElementById('box');
+  		box.style.display = 'block';
+	}	);
+
+	btn7.addEventListener('click', () => {
+  		// 👇️ hide button
+  		btn7.style.display = 'none';
+
+  		// 👇️ show div
+  		const box = document.getElementById('box');
+  		box.style.display = 'block';
+	}	);
+
+	btn8.addEventListener('click', () => {
+  		// 👇️ hide button
+  		btn8.style.display = 'none';
+
+  		// 👇️ show div
+  		const box = document.getElementById('box');
+  		box.style.display = 'block';
+	}	);
+
+	btn9.addEventListener('click', () => {
+  		// 👇️ hide button
+  		btn9.style.display = 'none';
+
+  		// 👇️ show div
+  		const box = document.getElementById('box');
+  		box.style.display = 'block';
+	}	);
+
+	btn10.addEventListener('click', () => {
+  		// 👇️ hide button
+  		btn10.style.display = 'none';
+
+  		// 👇️ show div
+  		const box = document.getElementById('box');
+  		box.style.display = 'block';
+	}	);
 	function next() {
 		if(i <= images.length) {
 			i++;
