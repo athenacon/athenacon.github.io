@@ -8,7 +8,7 @@ from starlette.middleware.cors import CORSMiddleware
 class TestResults(BaseModel):
     test_name: str
         
-    cntofclickedbtn: int = None
+    cntofclickedbtn: float = None
         
     test_a_1: str = None
     test_a_2: str = None
