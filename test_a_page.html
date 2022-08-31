@@ -792,6 +792,7 @@
 	var slider_img = document.querySelector('.slider-img');
 	var images = ['a.jpg', 'b.jpg', 'c.jpg', 'd.jpg', 'e.jpg', 'f.jpg', 'g.jpg', 'h.jpg', 'i.jpg', 'k.jpg'];
 	var i = 0;
+	var cnt = 0;
 	var startTimerOnlyFirst, startTime, endTime;
 	window.onload = function StartTimer() {
 		// it runs only the first time when the page is loaded! not after each fieldset/tab
@@ -812,93 +813,88 @@
 	btn.addEventListener('click', () => {
   		// 👇️ hide button
   		btn.style.display = 'none';
-		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
+		cnt = cnt + 1
   		// 👇️ show div
   		const box = document.getElementById('box');
-  		box.style.display = 'block';
+  		 
 	}	);
 
 
 	btn2.addEventListener('click', () => {
   		// 👇️ hide button
   		btn2.style.display = 'none';
-		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
+		cnt = cnt + 1
   		// 👇️ show div
   		const box = document.getElementById('box');
-  		box.style.display = 'block';
 	}	);
 
 	btn3.addEventListener('click', () => {
   		// 👇️ hide button
   		btn3.style.display = 'none';
-		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
+		cnt = cnt + 1
   		// 👇️ show div
   		const box = document.getElementById('box');
-  		box.style.display = 'block';
 	}	);
 
 	btn4.addEventListener('click', () => {
   		// 👇️ hide button
   		btn4.style.display = 'none';
-		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
+		cnt = cnt + 1
   		// 👇️ show div
   		const box = document.getElementById('box');
-  		box.style.display = 'block';
 	}	);
 
 	btn5.addEventListener('click', () => {
   		// 👇️ hide button
   		btn5.style.display = 'none';
-		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
+		cnt = cnt + 1
   		// 👇️ show div
   		const box = document.getElementById('box');
-  		box.style.display = 'block';
 	}	);
 
 	btn6.addEventListener('click', () => {
   		// 👇️ hide button
   		btn6.style.display = 'none';
-		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
+		cnt = cnt + 1
   		// 👇️ show div
   		const box = document.getElementById('box');
-  		box.style.display = 'block';
 	}	);
 
 	btn7.addEventListener('click', () => {
   		// 👇️ hide button
   		btn7.style.display = 'none';
-		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
   		// 👇️ show div
   		const box = document.getElementById('box');
-  		box.style.display = 'block';
 	}	);
 
 	btn8.addEventListener('click', () => {
   		// 👇️ hide button
   		btn8.style.display = 'none';
-		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
+		cnt = cnt + 1
   		// 👇️ show div
   		const box = document.getElementById('box');
-  		box.style.display = 'block';
 	}	);
 
 	btn9.addEventListener('click', () => {
   		// 👇️ hide button
   		btn9.style.display = 'none';
-		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
+		cnt = cnt + 1
   		// 👇️ show div
+		console.log("cnt"+cnt)
   		const box = document.getElementById('box');
-  		box.style.display = 'block';
 	}	);
 
 	btn10.addEventListener('click', () => {
   		// 👇️ hide button
   		btn10.style.display = 'none';
-		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
+		cnt = cnt + 1
   		// 👇️ show div
   		const box = document.getElementById('box');
-  		box.style.display = 'block';
 	}	);
+
+	function toggleClock() {
+		cnt = cnt + 1
+	}
 	function next() {
 		if(i <= images.length) {
 			i++;
@@ -937,7 +933,9 @@
 				return setImg();
 			} else if(i === 10) {
 				document.querySelector('input[name="test_a_10_reaction_time"]').value = seconds;
-				 
+
+				document.querySelector('input[name="cntofclickedbtn"]').value = cnt ;
+
 				let xhr = new XMLHttpRequest();
 				xhr.open("POST", "https://pedestrian-evaluation-backend.herokuapp.com/mock_post_test_results/", true);
  
