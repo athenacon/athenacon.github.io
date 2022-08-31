@@ -71,12 +71,12 @@
 			<div class="row">
 				<div class="col-7" style="font-size:large">
 					<div class="slider"> <img src="a.jpg" alt="Barrier / Obstacle in Nicosia" class="slider-img" style="width:85%"> </div>
+					<input type="hidden" name="cntofclickedbtn" value="0">
 				</div>
 				<div class="col" style="font-size:large">
 					<!-- fieldsets -->
 					<fieldset  > <b> Please select the appropriate obstacle type: </b>
 						<input type="hidden" name="test_a_1_reaction_time" value="1.1">
-						<input type="hidden" name="cntofclickedbtn" value="0">
 						<br>
 						<input type="radio" name="test_a_1" value="Hole / Pot-hole" /> Hole / Pot-hole
 						<br>
@@ -812,7 +812,7 @@
 	btn.addEventListener('click', () => {
   		// 👇️ hide button
   		btn.style.display = 'none';
-		cntofclickedbtn = cntofclickedbtn +1
+		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
   		// 👇️ show div
   		const box = document.getElementById('box');
   		box.style.display = 'block';
@@ -822,7 +822,7 @@
 	btn2.addEventListener('click', () => {
   		// 👇️ hide button
   		btn2.style.display = 'none';
-		cntofclickedbtn = cntofclickedbtn +1
+		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
   		// 👇️ show div
   		const box = document.getElementById('box');
   		box.style.display = 'block';
@@ -831,7 +831,7 @@
 	btn3.addEventListener('click', () => {
   		// 👇️ hide button
   		btn3.style.display = 'none';
-		cntofclickedbtn = cntofclickedbtn +1
+		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
   		// 👇️ show div
   		const box = document.getElementById('box');
   		box.style.display = 'block';
@@ -840,7 +840,7 @@
 	btn4.addEventListener('click', () => {
   		// 👇️ hide button
   		btn4.style.display = 'none';
-		cntofclickedbtn = cntofclickedbtn +1
+		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
   		// 👇️ show div
   		const box = document.getElementById('box');
   		box.style.display = 'block';
@@ -849,7 +849,7 @@
 	btn5.addEventListener('click', () => {
   		// 👇️ hide button
   		btn5.style.display = 'none';
-		cntofclickedbtn = cntofclickedbtn +1
+		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
   		// 👇️ show div
   		const box = document.getElementById('box');
   		box.style.display = 'block';
@@ -858,7 +858,7 @@
 	btn6.addEventListener('click', () => {
   		// 👇️ hide button
   		btn6.style.display = 'none';
-		cntofclickedbtn = cntofclickedbtn +1
+		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
   		// 👇️ show div
   		const box = document.getElementById('box');
   		box.style.display = 'block';
@@ -867,7 +867,7 @@
 	btn7.addEventListener('click', () => {
   		// 👇️ hide button
   		btn7.style.display = 'none';
-		cntofclickedbtn = cntofclickedbtn +1
+		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
   		// 👇️ show div
   		const box = document.getElementById('box');
   		box.style.display = 'block';
@@ -876,7 +876,7 @@
 	btn8.addEventListener('click', () => {
   		// 👇️ hide button
   		btn8.style.display = 'none';
-		cntofclickedbtn = cntofclickedbtn +1
+		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
   		// 👇️ show div
   		const box = document.getElementById('box');
   		box.style.display = 'block';
@@ -885,7 +885,7 @@
 	btn9.addEventListener('click', () => {
   		// 👇️ hide button
   		btn9.style.display = 'none';
-		cntofclickedbtn = cntofclickedbtn +1
+		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
   		// 👇️ show div
   		const box = document.getElementById('box');
   		box.style.display = 'block';
@@ -894,7 +894,7 @@
 	btn10.addEventListener('click', () => {
   		// 👇️ hide button
   		btn10.style.display = 'none';
-		cntofclickedbtn = cntofclickedbtn +1
+		document.querySelector('input[name="cntofclickedbtn"]').value = cntofclickedbtn +1;
   		// 👇️ show div
   		const box = document.getElementById('box');
   		box.style.display = 'block';
